@@ -1,0 +1,18 @@
+CREATE TABLE inventory (
+	id SERIAL PRIMARY KEY,
+	vehicle_make VARCHAR(255) NOT NULL,
+	vehicle_model VARCHAR(255) NOT NULL,
+	vehicle_year INTEGER NOT NULL,
+);
+
+CREATE TABLE sales (
+	id SERIAL PRIMARY KEY,
+	car_id INTEGER NOT NULL,
+	employee_id INTEGER NOT NULL,
+	date_sold TIMESTAMP NOT NULL DEFAULT NOW()
+);
+
+CREATE TABLE employees (
+	id SERIAL PRIMARY KEY,
+	name VARCHAR(255),
+);
