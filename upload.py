@@ -3,11 +3,13 @@ from datetime import datetime
 from sqlalchemy import create_engine, Table, Column, String, Integer, MetaData, ForeignKey, DateTime
 import sys
 
-db_user = 'jessebreuer-penello'
-db_port = 5432
-db_host = 'localhost'
-db_name = 'car_dealership'
-db_string = 'postgresql://{}@{}:{}/{}'.format(db_user,db_host,db_port,db_name)
+# for local development
+#db_user = 'jessebreuer-penello'
+#db_port = 5432
+#db_host = 'localhost'
+#db_name = 'car_dealership'
+#db_string = 'postgresql://{}@{}:{}/{}'.format(db_user,db_host,db_port,db_name)
+db_string = os.environ.get('DATABASE_URL')
 
 def main(args):
     fname = args[0]
