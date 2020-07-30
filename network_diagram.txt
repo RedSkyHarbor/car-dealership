@@ -1,0 +1,11 @@
+Gunicorn:
+	I chose to use Gunicorn because it is a well-known WSGI compliant web server. It is capable of everything Apacahe and NGINX can do but is ready to serve python applications with no configuration.
+
+Flask:
+	I chose to use Flask because it is a lightweight framework that couples well with SQLalchemy. It defines one route that queries my PSQL database for information to display in the html template that it renders.
+
+Psycopg2:
+	This is a simple python->psql connector that allows us to create sql queries with python and send them to a database. I chose it because it is actively developed, well known, and is designed for multi-threaded applications (even though my application is single threaded)
+
+PostgresQL:
+	DB choice here is subjective, I have no preference of using PSQL over SQL -- though PSQL is easy to set up when deploying on Heroku.	
