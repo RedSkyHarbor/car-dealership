@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Car Dealership</title>
+   </head>
+   
+	<body>
+		<header>
+			Car Dealership
+		</header>
+		<br />
+		<section>
+			<p>Best selling car: {{car_details.vehicle_year}} {{car_details.vehicle_make}} {{car_details.vehicle_model}}</p>
+			<p>This car sold {{car_details.count}} times this month</p>
+		</section>
+		<br />
+		<section>
+			Employees who sold this car this month:
+			{% for i in cars_sold_per_employee %}
+			<p>{{i.name}} sold this car {{i.cars_sold}} times</p>
+			{% endfor %}
+		</section>
+		<br />
+		<footer>
+			Created by Jesse Breuer-Penello
+		</footer>
+	</body>
+
+</html>
