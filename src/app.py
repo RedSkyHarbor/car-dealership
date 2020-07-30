@@ -1,13 +1,17 @@
+import os
 from flask import Flask, render_template
 from sqlalchemy import create_engine
 
 app = Flask(__name__)
 
-db_user = 'jessebreuer-penello'
-db_port = 5432
-db_host = 'localhost'
-db_name = 'car_dealership'
-db_string = 'postgresql://{}@{}:{}/{}'.format(db_user,db_host,db_port,db_name)
+# Below for local developement only
+#db_user = 'jessebreuer-penello'
+#db_port = 5432
+#db_host = 'localhost'
+#db_name = 'car_dealership'
+#db_string = 'postgresql://{}@{}:{}/{}'.format(db_user,db_host,db_port,db_name)
+
+db_string = os.environ.get('DATABASE_URL')
 db = create_engine(db_string)
 
 @app.route('/')
