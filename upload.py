@@ -34,8 +34,8 @@ def upload_inventory(fname, db, meta):
     inventory_table = Table('inventory', meta,
                             Column('id', Integer, primary_key=True),
                             Column('vehicle_make', String),
-                            Column('vehicle_model', String),
-                            Column('vehicle_year', Integer))
+                            Column('vehicle_year', Integer),
+                            Column('vehicle_model', String))
 
     with db.connect() as conn:
         inventory_table.create()
