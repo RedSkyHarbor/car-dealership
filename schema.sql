@@ -2,7 +2,7 @@ CREATE TABLE inventory (
 	id SERIAL PRIMARY KEY,
 	vehicle_make VARCHAR(255) NOT NULL,
 	vehicle_model VARCHAR(255) NOT NULL,
-	vehicle_year INTEGER NOT NULL,
+	vehicle_year INTEGER NOT NULL
 );
 
 CREATE TABLE sales (
@@ -14,5 +14,5 @@ CREATE TABLE sales (
 
 CREATE TABLE employees (
 	id SERIAL PRIMARY KEY,
-	name VARCHAR(255),
+	name VARCHAR(255)
 );
